@@ -1,5 +1,6 @@
 {
     "name": "dimti/oc-sber-plugin",
+    "type": "october-plugin",
     "description": "Sber payment gateway for offline.mall",
     "require": {
         "andrewnovikof/omnipay-sberbank": "^3.0"
