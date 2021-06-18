@@ -1,0 +1,14 @@
+{
+    "name": "dimti/oc-sber-plugin",
+    "description": "Sber payment gateway for offline.mall",
+    "require": {
+        "andrewnovikof/omnipay-sberbank": "^3.0"
+    },
+    "authors": [
+        {
+            "name": "WP Studio Team",
+            "email": "info@wpstudio.ru"
+        }
+    ],
+    "minimum-stability": "dev"
+}

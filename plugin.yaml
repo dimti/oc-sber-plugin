@@ -1,0 +1,6 @@
+plugin:
+    name: 'wpstudio.sber::lang.plugin.name'
+    description: 'wpstudio.sber::lang.plugin.description'
+    author: WP Studio, info@wpstudio.ru
+    icon: oc-icon-credit-card
+    homepage: ''
