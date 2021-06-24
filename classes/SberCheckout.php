@@ -179,7 +179,7 @@ class SberCheckout extends PaymentProvider
              */
             $response = $gateway->orderStatus(
                 [
-                    'orderId' => $result->order->payment_gateway_id, // gateway order number
+                    'orderId' => $result->order->payment_transaction_id, // gateway order number
                     'language' => 'ru'
                 ]
             )->send();
