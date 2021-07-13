@@ -87,10 +87,7 @@ class SberCheckout extends PaymentProvider
 
             assert($request instanceof AuthorizeRequest);
 
-            // hacking private method
-            $reflectionMethod = new \ReflectionMethod(AbstractRequest::class, 'setParameter');
-            $reflectionMethod->setAccessible(true);
-            $reflectionMethod->invoke($request, 'orderBundle', $this->getOrderBundle());
+            $request->setOrderBundle($this->getOrderBundle());
 
             $response = $request->send();
         } catch (Throwable $e) {
@@ -142,20 +139,24 @@ class SberCheckout extends PaymentProvider
     {
         $cartItems = [];
 
+        $items = [];
+
         foreach ($this->order->products as $positionId => $product) {
             assert($product instanceof OrderProduct);
 
-            $cartItems['items'] = [
-                'positionId' => $positionId,
+            $items[] = [
+                'positionId' => $positionId + 1,
                 'name' => $product->name,
                 'quantity' => [
                     'value' => $product->quantity,
-                    'measure' => ''
+                    'measure' => 'шт.'
                 ],
                 'itemCode' => $product->variant_id ?? $product->product_id,
-                'itemPrice' => $product->pricePostTaxes()->float,
+                'itemPrice' => $product->pricePostTaxes()->integer,
             ];
         }
+
+        $cartItems['items'] = $items;
 
         return $cartItems;
     }

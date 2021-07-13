@@ -11,5 +11,11 @@
             "email": "info@wpstudio.ru"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/dimti/omnipay-sberbank.git"
+        }
+    ],
     "minimum-stability": "dev"
 }
