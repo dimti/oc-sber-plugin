@@ -1,5 +1,5 @@
 {
-    "name": "dimti/oc-sber-plugin",
+    "name": "wpstudio/oc-sber-plugin",
     "type": "october-plugin",
     "description": "Sber payment gateway for offline.mall",
     "require": {
