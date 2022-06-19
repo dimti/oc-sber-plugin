@@ -3,7 +3,7 @@
     "type": "october-plugin",
     "description": "Sber payment gateway for offline.mall",
     "require": {
-        "andrewnovikof/omnipay-sberbank": "^3.0"
+        "andrewnovikof/omnipay-sberbank": "dev-master"
     },
     "authors": [
         {
